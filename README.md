@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Vignesh Swaminathan Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, professional portfolio website showcasing my work as a Full Stack Developer and Data Scientist.
 
-## Available Scripts
+## 🚀 Getting Started
 
-In the project directory, you can run:
+1. Install dependencies:
+```bash
+npm install
+```
 
-### `npm start`
+2. Start development server:
+```bash
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📧 Email Contact Configuration
 
-### `npm test`
+✅ **Configured and Working**: The contact form now sends emails directly through EmailJS using your Boston University email.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### How It Works
+- Form submissions are sent directly to vignesh2@bu.edu via EmailJS service
+- No external email clients are opened - fully integrated experience
+- Professional email templates with structured formatting
 
-### `npm run build`
+### Technical Details
+- Service ID: service_xgs0s8g
+- Template ID: template_bg0ggr9
+- Public Key: _vhWG55s-aUl7V1AB
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The configuration is already set up in `.env` file for seamless email delivery.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🎨 Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Responsive Design**: Optimized for all device sizes
+- **Professional UI**: Clean, modern design suitable for recruiters
+- **Animated Elements**: Smooth transitions with Framer Motion
+- **Interactive Components**: Expandable skill categories, project modals
+- **SEO Optimized**: Meta tags, Open Graph support
 
-### `npm run eject`
+## 🛠️ Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React 18** - Frontend framework
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **EmailJS** - Contact form service (optional)
+- **Lucide React** - Icon library
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📱 Sections
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Hero/Landing
+- About me with statistics
+- Interactive skills showcase
+- Projects portfolio with details
+- Research & publications
+- Professional experience timeline
+- Education & certifications
+- Contact form with quick actions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Deployment
 
-## Learn More
+### Vercel (Recommended)
+```bash
+npm install -g vercel
+vercel
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### GitHub Pages
+```bash
+npm install gh-pages --save-dev
+npm run build
+npm run deploy
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📄 Resume
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The resume PDF is automatically included in the build output. Update `public/Vignesh_Swaminathan_Resume.pdf` to use your latest resume.
