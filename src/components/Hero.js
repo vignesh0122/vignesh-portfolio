@@ -84,7 +84,7 @@ const Hero = () => {
             </motion.button>
 
             <motion.a
-              href="https://calendly.com/your-username"
+              href="https://calendly.com/vignesh2-bu/meeting-with-vignesh"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white/20 hover:border-white/50"
