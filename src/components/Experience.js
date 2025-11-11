@@ -44,7 +44,7 @@ const experiencesData = [
     location: 'Bengaluru, India',
     period: 'Aug 2023 - Dec 2023',
     current: false,
-    logo: '/jiologo.png',
+    logo: '/Jiologo.png',
     summary: 'At JIO, developed an electric vehicle companion app and cluster, implementing Bluetooth communication for real-time data exchange and command transmission, while enhancing UI/UX design based on Figma prototypes.',
     achievements: [
       'Developed electric vehicle companion app with Bluetooth communication',
