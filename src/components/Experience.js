@@ -5,12 +5,12 @@ import { ChevronDown, ChevronUp, MapPin, Calendar, TrendingUp } from 'lucide-rea
 const experiencesData = [
   {
     id: 1,
-    company: 'Boston University MET IT',
+    company: 'Boston University IT',
     title: 'Information Technology Analyst',
     location: 'Boston, MA',
     period: 'Sep 2024 - Present',
     current: true,
-    logo: `data:image/svg+xml;base64,${btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="#CC0000"><rect x="0" y="0" width="50" height="50" fill="#CC0000"/><rect x="50" y="0" width="50" height="50" fill="#FFFFFF"/><text x="25" y="30" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">BU</text><text x="75" y="30" fill="#CC0000" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">MET</text></svg>')}`,
+    logo: '/bulogo.png',
     summary: 'Oversee ServiceNow platform and resolve 100+ support tickets weekly while leveraging Microsoft Office, Power BI, and Azure cloud development to enhance reporting, streamline workflows, and support secure file sharing across the university.',
     achievements: [
       'Oversaw ServiceNow platform maintenance and resolved 100+ weekly support tickets',
@@ -44,7 +44,7 @@ const experiencesData = [
     location: 'Bengaluru, India',
     period: 'Aug 2023 - Dec 2023',
     current: false,
-    logo: `data:image/svg+xml;base64,${btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="#DC2626"><circle cx="25" cy="25" r="15" fill="#EF4444"/><text x="25" y="32" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">J</text><circle cx="50" cy="25" r="15" fill="#DC2626"/><text x="50" y="32" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">I</text><circle cx="75" cy="25" r="15" fill="#3B82F6"/><text x="75" y="32" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">O</text></svg>')}`,
+    logo: '/jio-logo.png',
     summary: 'At JIO, developed an electric vehicle companion app and cluster, implementing Bluetooth communication for real-time data exchange and command transmission, while enhancing UI/UX design based on Figma prototypes.',
     achievements: [
       'Developed electric vehicle companion app with Bluetooth communication',

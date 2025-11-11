@@ -53,7 +53,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Transforming complex ideas into elegant software solutions. Passionate about creating impactful applications that solve real-world problems. Currently shaping digital experiences at Boston University's MET IT department.
+            Transforming complex ideas into elegant software solutions. Passionate about creating impactful applications that solve real-world problems. Currently shaping digital experiences at Boston University's IT department.
           </motion.p>
 
           {/* CTA Buttons */}

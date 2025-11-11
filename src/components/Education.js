@@ -9,7 +9,7 @@ const educationData = [
     degree: 'Master of Science in Computer Science',
     location: 'Boston, MA',
     period: 'Sep 2024 - Jan 2026',
-    gpa: '3.70/4.0',
+    gpa: '3.85/4.0',
     courses: ['Software Engineering', 'Data Science with Python', 'Advanced Machine Learning', 'Deep Reinforcement Learning'],
     icon: '🎓',
     logo: 'BU'

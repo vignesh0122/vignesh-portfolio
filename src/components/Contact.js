@@ -145,7 +145,7 @@ const Contact = () => {
                 <motion.a
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  href="https://calendly.com/your-username"
+                  href="https://calendly.com/vignesh2-bu/meeting-with-vignesh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center p-4 bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors"
