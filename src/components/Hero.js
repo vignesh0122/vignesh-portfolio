@@ -8,12 +8,41 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen bg-hero-bg flex items-center relative overflow-hidden">
+    <section id="hero" className="min-h-screen bg-hero-bg dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-cyan-400/20 to-pink-500/20 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-white/20 rounded-full"
+            initial={{
+              x: Math.random() * 100 + '%',
+              y: Math.random() * 100 + '%',
+              scale: 0
+            }}
+            animate={{
+              y: [null, -100],
+              scale: [0, 1, 0],
+              opacity: [0, 0.5, 0]
+            }}
+            transition={{
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              delay: Math.random() * 10,
+              ease: "easeOut"
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
@@ -43,7 +72,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Full Stack Developer · Data Scientist · IT Analyst
+            Information Technology Analyst · Full Stack Developer · Data Scientist
           </motion.p>
 
           {/* Subline */}
@@ -53,7 +82,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Transforming complex ideas into elegant software solutions. Passionate about creating impactful applications that solve real-world problems. Currently shaping digital experiences at Boston University's IT department.
+            Leading IT operations and digital transformation at Boston University, specializing in ServiceNow platform development, cloud technologies, and AI-driven solutions. Passionate about creating impactful software that solves complex real-world problems.
           </motion.p>
 
           {/* CTA Buttons */}

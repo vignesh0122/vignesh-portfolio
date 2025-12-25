@@ -96,7 +96,7 @@ const About = () => {
                     <div>
                       <div className="font-semibold text-gray-900">Boston University</div>
                       <div className="text-gray-600">M.S., Computer Science (Sep 2024 – Jan 2026)</div>
-                      <div className="text-gray-500 text-sm">GPA: 3.70/4.0</div>
+                      <div className="text-gray-500 text-sm">GPA: 3.65/4.0</div>
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">Visvesvaraya Technological University</div>

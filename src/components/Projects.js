@@ -47,31 +47,17 @@ const projectsData = [
   },
   {
     id: 4,
-    title: 'Diamond Price Prediction',
-    description: 'Machine learning model to predict diamond prices based on 4C parameters using regression algorithms.',
-    thumbnail: `data:image/svg+xml;base64,${btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" fill="#f8fafc"><rect width="400" height="250" fill="#8b5cf6"/><path d="M200 50l40 60l-58 17v69l-22-69l-58-17l58-67z" fill="#fbbf24"/><circle cx="180" cy="110" r="3" fill="white"/><circle cx="200" cy="125" r="3" fill="white"/><circle cx="220" cy="110" r="3" fill="white"/><text x="200" y="220" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="600">ML Prediction</text></svg>')}`,
-    demoUrl: 'https://diamond-predictor.vercel.app', // placeholder
-    githubUrl: 'https://github.com/vignesh0122/Diamond_Price_Prediction',
-    technologies: ['Python', 'Scikit-Learn', 'Pandas', 'NumPy', 'Jupyter'],
-    build: 'Developed a regression model predicting diamond prices from carat, cut, color, clarity parameters. Preprocessed data, trained multiple models (Linear Regression, Random Forest, Gradient Boosting), and created visualization dashboard.',
-    tech: 'Python, Scikit-learn, Pandas, NumPy, Matplotlib, Streamlit',
-    challenges: 'Feature engineering, model overfitting, interpretation of predictions',
-    solution: 'Feature scaling, cross-validation, and ensembling techniques achieving 92% prediction accuracy.',
-    impact: 'Provided accurate price estimations helping consumers make informed jewelry purchase decisions.'
-  },
-  {
-    id: 5,
-    title: 'Fake Banknote Detection',
-    description: 'ML classification system to distinguish genuine and counterfeit banknotes using image processing and SVM.',
-    thumbnail: `data:image/svg+xml;base64,${btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" fill="#f8fafc"><rect width="400" height="250" fill="#059669"/><rect x="150" y="100" width="100" height="50" rx="5" fill="#374151"/><circle cx="170" cy="115" r="6" fill="#fbbf24"/><circle cx="200" cy="115" r="6" fill="#fbbf24"/><circle cx="230" cy="115" r="6" fill="#fbbf24"/><path d="M160 140h80m-60-10h40m-60 20h40" stroke="white" stroke-width="2"/><text x="200" y="220" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="600">Banknote Detection</text></svg>')}`,
-    demoUrl: 'https://banknote-detection.vercel.app', // placeholder
-    githubUrl: 'https://github.com/vignesh0122/Fake_Banknote_Detection',
-    technologies: ['Python', 'OpenCV', 'SVM', 'Pandas', 'Scikit-learn'],
-    build: 'Built a computer vision system using image processing techniques to extract features from banknote images, trained SVM classifier to distinguish genuine vs fake notes, and developed web interface for real-time detection.',
-    tech: 'Python, OpenCV, SVM, Flask, Scikit-learn, JavaScript',
-    challenges: 'Image preprocessing for varying conditions, class imbalance, real-time performance',
-    solution: 'Advanced image segmentation, SMOTE for balancing data, optimized model for web deployment.',
-    impact: 'Achieved 98% accuracy in banknote authentication, demonstrating potential for automated fraud detection.'
+    title: 'Collider Scope',
+    description: 'Big data analytics platform for particle physics classification using PySpark and Databricks ML models.',
+    thumbnail: `data:image/svg+xml;base64,${btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" fill="#f8fafc"><rect width="400" height="250" fill="#7c3aed"/><circle cx="200" cy="125" r="80" fill="#a855f7" opacity="0.8"/><path d="M120 80l160 0l-80 90z" fill="#fbbf24"/><circle cx="160" cy="100" r="4" fill="white"/><circle cx="200" cy="130" r="4" fill="white"/><circle cx="240" cy="100" r="4" fill="white"/><text x="200" y="220" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="600">Physics ML</text></svg>')}`,
+    demoUrl: null,
+    githubUrl: 'https://github.com/vignesh0122/Collider-Scope',
+    technologies: ['PySpark', 'Databricks', 'Machine Learning', 'Big Data', 'Python'],
+    build: 'Developed a big data analytics platform for particle physics classification using PySpark and Databricks. Implemented feature extraction pipelines to process kinematic data from particle collisions, trained and tuned large-scale ML models, and validated performance achieving >0.85 AUC score.',
+    tech: 'Python, PySpark, Databricks, ML algorithms, Big Data processing, Feature Engineering',
+    challenges: 'Handling large-scale datasets, optimizing distributed ML pipelines, feature extraction from complex kinematic data',
+    solution: 'Implemented distributed computing with PySpark, optimized feature engineering pipelines, and used Databricks for scalable ML training achieving high AUC performance.',
+    impact: 'Enabled efficient particle physics research with high-accuracy classification models for CERN data analysis.'
   }
 ];
 
@@ -117,13 +103,14 @@ const Projects = () => {
           )}
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedProject(project)}
-            className="btn-secondary flex items-center text-sm"
+            className="btn-secondary flex items-center text-xs sm:text-sm px-3 py-2"
           >
-            <Eye size={16} className="mr-2" />
-            Details
+            <Eye size={14} className="mr-1 sm:mr-2" />
+            <span className="hidden xs:inline">Details</span>
+            <span className="xs:hidden">Info</span>
           </button>
 
           {project.demoUrl && (
@@ -131,10 +118,11 @@ const Projects = () => {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary flex items-center text-sm"
+              className="btn-secondary flex items-center text-xs sm:text-sm px-3 py-2"
             >
-              <ExternalLink size={16} className="mr-2" />
-              Demo
+              <ExternalLink size={14} className="mr-1 sm:mr-2" />
+              <span className="hidden xs:inline">Demo</span>
+              <span className="xs:hidden">Live</span>
             </a>
           )}
 
@@ -142,10 +130,11 @@ const Projects = () => {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary flex items-center text-sm"
+            className="btn-secondary flex items-center text-xs sm:text-sm px-3 py-2"
           >
-            <Github size={16} className="mr-2" />
-            Code
+            <Github size={14} className="mr-1 sm:mr-2" />
+            <span className="hidden xs:inline">Code</span>
+            <span className="xs:hidden">Git</span>
           </a>
         </div>
       </div>
