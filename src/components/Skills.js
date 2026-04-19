@@ -47,6 +47,14 @@ const skillsData = {
       { name: 'Pandas', proficiency: 'Advanced', projects: 'Data Processing' },
       { name: 'NumPy', proficiency: 'Advanced', projects: 'Scientific Computing' },
       { name: 'PyTorch', proficiency: 'Intermediate', projects: 'ML Models' },
+      { name: 'TensorFlow', proficiency: 'Intermediate', projects: 'Deep Learning' },
+      { name: 'PySpark', proficiency: 'Advanced', projects: 'Collider Scope' },
+      { name: 'Databricks', proficiency: 'Advanced', projects: 'Big Data Analytics' },
+      { name: 'Scikit-learn', proficiency: 'Advanced', projects: 'ML Classification' },
+      { name: 'NLP', proficiency: 'Intermediate', projects: 'MenuMatch' },
+      { name: 'LLMs', proficiency: 'Intermediate', projects: 'AI Integrations' },
+      { name: 'RAG', proficiency: 'Intermediate', projects: 'Document Q&A Systems' },
+      { name: 'OpenAI GPT', proficiency: 'Advanced', projects: 'API Integrations' },
       { name: 'Hadoop', proficiency: 'Beginner', projects: 'Big Data' },
       { name: 'MySQL', proficiency: 'Advanced', projects: 'Database Design' },
       { name: 'MongoDB', proficiency: 'Intermediate', projects: 'NoSQL Databases' },
@@ -65,6 +73,7 @@ const skillsData = {
     items: [
       { name: 'Power BI', proficiency: 'Intermediate', projects: 'Business Intelligence' },
       { name: 'ServiceNow', proficiency: 'Advanced', projects: 'IT Service Management' },
+      { name: 'Power Platform', proficiency: 'Advanced', projects: 'Cloud Application Development' },
     ]
   }
 };

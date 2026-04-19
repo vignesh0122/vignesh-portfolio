@@ -5,23 +5,40 @@ import { ChevronDown, ChevronUp, MapPin, Calendar, TrendingUp } from 'lucide-rea
 const experiencesData = [
   {
     id: 1,
-    company: 'Boston University IT',
-    title: 'Information Technology Analyst',
+    company: 'Boston University MET IT',
+    title: 'Cloud Application Developer',
     location: 'Boston, MA',
-    period: 'Sep 2024 - Present',
+    period: 'Feb 2026 - Present',
     current: true,
     logo: '/bulogo.png',
-    summary: 'Oversee ServiceNow platform and resolve 100+ support tickets weekly while leveraging Microsoft Office, Power BI, and Azure cloud development to enhance reporting, streamline workflows, and support secure file sharing across the university.',
+    summary: 'Engineered cloud-based Power Apps for enterprise onboarding workflows, modernizing UI and migrating legacy SharePoint data into Dataverse, improving operational efficiency by 40% and strengthening centralized data management in Azure.',
     achievements: [
-      'Oversaw ServiceNow platform maintenance and resolved 100+ weekly support tickets',
-      'Enhanced reporting and workflows using Power BI and Azure cloud development',
-      'Maintained 50+ IT documentation entries, reducing resolution time by 25%',
-      'Supported secure file sharing systems across university infrastructure'
+      'Engineered cloud-based Power Apps for enterprise onboarding workflows',
+      'Modernized UI and migrated legacy SharePoint data into Dataverse',
+      'Designed automated CI/CD pipelines for Power Fx solutions',
+      'Implemented Power Platform security best practices including RBAC and DLP policies'
+    ],
+    technologies: ['Power Apps', 'Dataverse', 'Azure', 'CI/CD', 'Power Platform']
+  },
+  {
+    id: 2,
+    company: 'Boston University MET IT',
+    title: 'Information Technology Analyst',
+    location: 'Boston, MA',
+    period: 'Sep 2024 - Jan 2026',
+    current: false,
+    logo: '/bulogo.png',
+    summary: 'Led development and automation initiatives on the ServiceNow platform, designing AI-assisted backend workflows and enhancements to streamline ticket triage, reporting, and resolution for enterprise-scale systems supporting daily operations.',
+    achievements: [
+      'Led development and automation initiatives on ServiceNow platform',
+      'Designed AI-assisted backend workflows for ticket triage',
+      'Maintained cloud-native backend tooling using Microsoft Azure, Power BI, and Office 365 integrations',
+      'Optimized system documentation reducing average ticket resolution time by 25%'
     ],
     technologies: ['ServiceNow', 'Power BI', 'Azure', 'Microsoft Office', 'IT Documentation']
   },
   {
-    id: 2,
+    id: 3,
     company: 'DSATM Department of Information Science',
     title: 'Teaching Assistant',
     location: 'Bengaluru, India',
@@ -38,7 +55,7 @@ const experiencesData = [
     technologies: ['C++', 'Programming Pedagogy', 'Assessment Tools']
   },
   {
-    id: 3,
+    id: 4,
     company: 'JIO Platforms Limited',
     title: 'Android Developer Intern',
     location: 'Bengaluru, India',
