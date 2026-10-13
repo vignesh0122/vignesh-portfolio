@@ -1,0 +1,47 @@
+.lens-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.lens-switcher__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 540;
+  color: var(--fg-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+  isolation: isolate;
+}
+.lens-switcher__btn:hover {
+  color: var(--fg);
+}
+.lens-switcher__btn.is-active {
+  color: var(--accent-fg);
+}
+.lens-switcher__pill {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 6px 18px -8px var(--glow);
+}
+.lens-switcher__btn.is-active kbd {
+  color: var(--accent-fg);
+  background: oklch(100% 0 0 / 0.18);
+  border-color: transparent;
+}
+.lens-switcher--compact .lens-switcher__btn {
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8rem;
+}

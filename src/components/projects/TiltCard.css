@@ -1,0 +1,17 @@
+.tilt {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.tilt__glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), oklch(100% 0 0 / 0.55), transparent 55%);
+  mix-blend-mode: soft-light;
+}
+:root[data-theme='dark'] .tilt__glare {
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), var(--glow), transparent 55%);
+  mix-blend-mode: screen;
+}

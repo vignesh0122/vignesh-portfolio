@@ -1,0 +1,92 @@
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
+  gap: 2rem;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  background:
+    radial-gradient(100% 120% at 0% 100%, var(--accent-soft) 0%, transparent 55%),
+    var(--surface-solid);
+}
+.contact__main {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+.contact__email {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  font-size: clamp(1.6rem, 4.2vw, 3rem);
+  line-height: 1.1;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.contact__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+}
+.contact__meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.contact__meta svg {
+  color: var(--accent);
+}
+.contact__resumes {
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+.resume-dl {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.resume-dl:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.resume-dl__icon {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-fg);
+  flex: none;
+}
+.resume-dl__text {
+  display: grid;
+  gap: 0.1rem;
+}
+.resume-dl__label {
+  font-weight: 600;
+}
+.resume-dl__label .mono {
+  color: var(--accent);
+  margin-left: 0.2rem;
+}
+.resume-dl__note {
+  font-size: 0.8rem;
+}
+@media (max-width: 860px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}

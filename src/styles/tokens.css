@@ -1,0 +1,119 @@
+/* ---------- Design tokens: lens (hue/chroma) × theme (lightness) ---------- */
+:root {
+  --hue: 295;
+  --chroma: 0.2;
+
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --font-display: var(--font-sans);
+  --display-weight: 700;
+  --display-tracking: -0.045em;
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  --container: 1180px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur: 400ms;
+  --dur-slow: 700ms;
+
+  --topbar-h: 64px;
+}
+
+/* Lens → hue, chroma, display face, texture */
+:root[data-lens='ai'] {
+  --hue: 295;
+  --chroma: 0.2;
+  --lens-name: 'ai';
+}
+:root[data-lens='cloud'] {
+  --hue: 225;
+  --chroma: 0.17;
+}
+:root[data-lens='research'] {
+  --hue: 45;
+  --chroma: 0.16;
+  --font-display: var(--font-serif);
+  --display-weight: 400;
+  --display-tracking: -0.015em;
+}
+
+/* Theme → lightness. Light is the default. */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: oklch(98.2% 0.005 var(--hue));
+  --bg-elev: oklch(100% 0 0);
+  --fg: oklch(19% 0.025 var(--hue));
+  --fg-muted: oklch(44% 0.025 var(--hue));
+  --fg-subtle: oklch(58% 0.02 var(--hue));
+  --surface: oklch(100% 0 0 / 0.72);
+  --surface-solid: oklch(99% 0.004 var(--hue));
+  --border: oklch(87% 0.015 var(--hue));
+  --border-strong: oklch(78% 0.02 var(--hue));
+  --accent: oklch(50% var(--chroma) var(--hue));
+  --accent-strong: oklch(42% var(--chroma) var(--hue));
+  --accent-fg: oklch(99% 0.01 var(--hue));
+  --accent-soft: oklch(94% calc(var(--chroma) * 0.4) var(--hue));
+  --accent-soft-fg: oklch(38% var(--chroma) var(--hue));
+  --glow: oklch(70% var(--chroma) var(--hue) / 0.35);
+  --glow-weak: oklch(70% var(--chroma) var(--hue) / 0.14);
+  --shadow: 0 1px 2px oklch(20% 0.02 var(--hue) / 0.06), 0 12px 32px -12px oklch(20% 0.03 var(--hue) / 0.18);
+  --shadow-lg: 0 2px 6px oklch(20% 0.02 var(--hue) / 0.08), 0 30px 60px -20px oklch(20% 0.04 var(--hue) / 0.3);
+  --texture-ink: oklch(30% 0.03 var(--hue) / 0.07);
+  --dot: oklch(45% var(--chroma) var(--hue));
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: oklch(13.5% 0.016 var(--hue));
+  --bg-elev: oklch(17.5% 0.02 var(--hue));
+  --fg: oklch(95% 0.01 var(--hue));
+  --fg-muted: oklch(73% 0.02 var(--hue));
+  --fg-subtle: oklch(58% 0.02 var(--hue));
+  --surface: oklch(20% 0.022 var(--hue) / 0.66);
+  --surface-solid: oklch(18% 0.02 var(--hue));
+  --border: oklch(29% 0.025 var(--hue));
+  --border-strong: oklch(40% 0.03 var(--hue));
+  --accent: oklch(79% var(--chroma) var(--hue));
+  --accent-strong: oklch(86% calc(var(--chroma) * 0.9) var(--hue));
+  --accent-fg: oklch(16% 0.05 var(--hue));
+  --accent-soft: oklch(27% calc(var(--chroma) * 0.5) var(--hue));
+  --accent-soft-fg: oklch(88% calc(var(--chroma) * 0.7) var(--hue));
+  --glow: oklch(75% var(--chroma) var(--hue) / 0.32);
+  --glow-weak: oklch(75% var(--chroma) var(--hue) / 0.12);
+  --shadow: 0 1px 2px oklch(0% 0 0 / 0.3), 0 12px 32px -12px oklch(0% 0 0 / 0.5);
+  --shadow-lg: 0 2px 6px oklch(0% 0 0 / 0.35), 0 30px 60px -20px oklch(0% 0 0 / 0.6);
+  --texture-ink: oklch(90% 0.03 var(--hue) / 0.06);
+  --dot: oklch(80% var(--chroma) var(--hue));
+}
+
+/* Per-lens textures layered under content (see base.css body::before) */
+:root[data-lens='ai'] {
+  --texture: radial-gradient(var(--texture-ink) 1px, transparent 1.2px);
+  --texture-size: 26px 26px;
+}
+:root[data-lens='cloud'] {
+  --texture: linear-gradient(var(--texture-ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--texture-ink) 1px, transparent 1px);
+  --texture-size: 44px 44px;
+}
+:root[data-lens='research'] {
+  --texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.45 0 0 0 0 0.35 0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  --texture-size: 160px 160px;
+}

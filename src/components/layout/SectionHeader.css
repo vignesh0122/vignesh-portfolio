@@ -1,0 +1,13 @@
+.section-header {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  max-width: 56ch;
+}
+.section-header__title {
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+}
+.section-header__intro {
+  min-height: 1.6em;
+  font-size: 1.05rem;
+}

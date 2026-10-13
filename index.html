@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vignesh Swaminathan — AI, Cloud & Research</title>
+    <meta name="description" content="Vignesh Swaminathan builds and evaluates LLM systems, automates enterprise cloud platforms, and researches AI governance at Boston University. View the portfolio through three lenses: AI Engineer, Cloud & IT, Research." />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7fa" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111116" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vignesh Swaminathan — AI, Cloud & Research" />
+    <meta property="og:description" content="LLM evaluation pipelines, enterprise cloud automation, and AI governance research. Pick a lens." />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vignesh Swaminathan — AI, Cloud & Research" />
+    <meta name="twitter:description" content="LLM evaluation pipelines, enterprise cloud automation, and AI governance research. Pick a lens." />
+    <meta name="twitter:image" content="/og.png" />
+    <!-- Pre-paint: set lens + theme before CSS loads. Keys mirror src/lib/constants.js -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        try {
+          var LENSES = ['ai', 'cloud', 'research'];
+          var q = new URLSearchParams(location.search).get('lens');
+          var lens = LENSES.indexOf(q) > -1 ? q : localStorage.getItem('vs.lens');
+          if (LENSES.indexOf(lens) === -1) lens = 'ai';
+          root.dataset.lens = lens;
+          var pref = localStorage.getItem('vs.theme');
+          var theme = pref === 'light' || pref === 'dark'
+            ? pref
+            : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          root.dataset.theme = theme;
+        } catch (e) {
+          root.dataset.lens = 'ai';
+          root.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

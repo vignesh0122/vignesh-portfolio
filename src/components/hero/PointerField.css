@@ -1,0 +1,11 @@
+.pointer-field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 70% at 60% 40%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 60% 40%, black 30%, transparent 100%);
+}
+.pointer-field--static {
+  background: radial-gradient(circle at 70% 35%, var(--glow-weak), transparent 55%);
+}

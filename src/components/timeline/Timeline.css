@@ -1,0 +1,117 @@
+.section--timeline {
+  padding-bottom: 0;
+}
+.section--timeline-h {
+  padding-top: 0;
+}
+.tl-h__header .section-header {
+  margin-bottom: 0;
+}
+
+/* ---- horizontal ---- */
+.tl-h {
+  position: relative;
+}
+.tl-h__viewport {
+  position: sticky;
+  top: var(--topbar-h);
+  height: calc(100vh - var(--topbar-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: clamp(1.5rem, 5vh, 3.5rem);
+  gap: 2rem;
+  /* clip, not hidden: a scroll container would be scrolled by focus() and break the transform */
+  overflow: clip;
+}
+.tl-h__rail-wrap {
+  display: grid;
+  gap: 0.5rem;
+}
+.tl-h__rail {
+  height: 2px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.tl-h__rail-fill {
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left;
+}
+.tl-h__rail-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--fg-subtle);
+  letter-spacing: 0.05em;
+}
+.tl-h__now {
+  color: var(--accent);
+}
+.tl-h__track {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem var(--gutter) 1rem calc((100vw - var(--container)) / 2);
+  padding-left: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  width: max-content;
+  will-change: transform;
+}
+.tl-h__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1.2rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-strong) 5%, var(--border-strong) 95%, transparent);
+}
+.tl-h__track .tnode {
+  width: clamp(320px, 30vw, 420px);
+  flex: none;
+}
+.tl-h__track .tnode--featured {
+  width: clamp(360px, 34vw, 480px);
+}
+.tl-h__track .tnode--compact {
+  width: clamp(280px, 24vw, 340px);
+}
+/* keep expanded details inside the pinned viewport on short screens */
+.tl-h__track .tnode__detail {
+  max-height: min(42vh, 480px);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.tl-h__end {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 4rem 0 1rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* ---- vertical ---- */
+.tl-v {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+  padding-left: 1.5rem;
+}
+.tl-v::before {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: var(--border-strong);
+}
+.tl-v .tnode__dot {
+  top: 1.5rem;
+  left: -1.5rem;
+  transform: translateX(-50%);
+  margin-left: 0.35rem;
+}
